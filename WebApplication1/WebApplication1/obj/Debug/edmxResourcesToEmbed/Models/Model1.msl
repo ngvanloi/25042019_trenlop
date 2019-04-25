@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CS4PEModelStoreContainer" CdmEntityContainer="CS4PEEntities">
+    <EntitySetMapping Name="BubleTeas">
+      <EntityTypeMapping TypeName="CS4PEModel.BubleTea">
+        <MappingFragment StoreEntitySet="BubleTea">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Topping" ColumnName="Topping" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
