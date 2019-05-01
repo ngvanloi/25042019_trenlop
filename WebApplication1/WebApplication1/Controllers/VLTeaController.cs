@@ -93,12 +93,12 @@ namespace WebApplication1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            BubleTea bubletea = db.BubleTeas.Find(id);
-            if (bubletea == null)
+            var model = db.BubleTeas.Find(id);
+            if (model == null)
             {
                 return HttpNotFound();
             }
-            return View(bubletea);
+            return View(model);
         }
 
         // POST: /VLTea/Delete/5
@@ -106,8 +106,8 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            BubleTea bubletea = db.BubleTeas.Find(id);
-            db.BubleTeas.Remove(bubletea);
+            BubleTea model = db.BubleTeas.Find(id);
+            db.BubleTeas.Remove(model);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
